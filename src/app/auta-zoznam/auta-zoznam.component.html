@@ -1,0 +1,36 @@
+<div class="col-1">
+  <h1><button type = "button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">ZOZNAM</button></h1>
+</div>
+<div class="mx-3">
+  <div *ngIf="!auta || auta?.length === 0">
+    Zoznam áut je prázdny.
+  </div>
+
+  <table class="table table-hover" *ngIf="auta.length > 0">
+    <thead>
+    <tr>
+      <th>Cena</th>
+      <th>Dvere</th>
+      <th>Osoby</th>
+      <th>Kufor</th>
+      <th>Bezpečnosť</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let auto of auta">
+      <td>{{ auto.price }}</td>
+      <td>{{ auto.doors }}</td>
+      <td>{{ auto.persons }}</td>
+      <td>{{ auto.lug_boot }}</td>
+      <td>{{ auto.safety }}</td>
+      <td>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(auto.id!)">UPRAVIŤ</button>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold" (click)="zmaz(auto.id!)">ZMAZAŤ</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
