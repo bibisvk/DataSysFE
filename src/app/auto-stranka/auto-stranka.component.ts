@@ -27,6 +27,17 @@ export class AutoStrankaComponent implements OnInit {
     });
   }
 
+  exportAut(): void{
+    this.autoService.exportAuto().subscribe(x =>{
+      const blob = new Blob([x], {type: 'application/pdf'});
+      const data = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = data;
+      link.download = 'cars.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
+    });
+  }
+
   chodSpat(): void {
     this.router.navigate(['']);
   }

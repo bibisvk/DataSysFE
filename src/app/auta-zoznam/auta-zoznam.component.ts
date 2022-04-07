@@ -17,6 +17,7 @@ export class AutaZoznamComponent{
   @Output()
   zmazAuto: EventEmitter<number> = new EventEmitter<number>();
 
+
   uprav(autoId: number): void {
     this.upravAuto.emit(autoId);
   }

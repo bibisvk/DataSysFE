@@ -32,4 +32,8 @@ export class AutoServiceService {
   deleteAuto(autoId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${autoId}`);
   }
+
+  exportAuto(): Observable<Blob>{
+    return this.http.get(`${this.apiUrl}/pdf`,{responseType:'blob'});
+  }
 }
