@@ -11,6 +11,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CustomersZoznamComponent } from './customers-zoznam/customers-zoznam.component';
+import { CustomersStrankaComponent } from './customers-stranka/customers-stranka.component';
+import { CustomersFormularComponent } from './customers-formular/customers-formular.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AutoFormularComponent,
     AutaZoznamComponent,
     AutoStrankaComponent,
+    CustomersZoznamComponent,
+    CustomersStrankaComponent,
+    CustomersFormularComponent,
 
   ],
     imports: [
