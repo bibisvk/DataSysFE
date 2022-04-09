@@ -14,3 +14,20 @@ export class Customer {
 
   }
 }
+export class CustomerZoznam {
+  customer_id?: number;
+  identification_number: string;
+  customer_firstname: string;
+  customer_lastname: string;
+  o_number: string;
+
+
+  constructor(customer: CustomerZoznam) {
+    this.customer_id = customer.customer_id;
+    this.identification_number = customer.identification_number;
+    this.customer_firstname = customer.customer_firstname;
+    this.customer_lastname = customer.customer_lastname;
+    this.o_number = customer.o_number;
+
+  }
+}
