@@ -1,0 +1,34 @@
+<div class="col-1">
+  <h1><button type = "button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">ZOZNAM</button></h1>
+</div>
+<div class="mx-3">
+  <div *ngIf="!customers || customers?.length === 0">
+    Zoznam zákazníkov je prázdny.
+  </div>
+
+  <table class="table table-hover" *ngIf="customers.length > 0">
+    <thead>
+    <tr>
+      <th>Rodné číslo</th>
+      <th>Meno</th>
+      <th>Priezvisko</th>
+      <th>Č.občianskeho</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.identification_number }}</td>
+      <td>{{ customer.customer_firstname }}</td>
+      <td>{{ customer.customer_lastname }}</td>
+      <td>{{ customer.o_number }}</td>
+      <td>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold mr-2" (click)="uprav(customer.customer_id!)">UPRAVIŤ</button>
+        <button type = "button" class="btn-danger rounded btn-md shadow rounded font-weight-bold" (click)="zmaz(customer.customer_id!)">ZMAZAŤ</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
