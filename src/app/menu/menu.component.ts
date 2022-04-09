@@ -16,7 +16,7 @@ export class MenuComponent {
 
   otvorMenu(m: MENU) {
     if (m === MENU.OSOBY) {
-      this.router.navigate(['/osoba']);
+      this.router.navigate(['/customer']);
     }
     if (m === MENU.AUTA) {
       this.router.navigate(['/auto']);
