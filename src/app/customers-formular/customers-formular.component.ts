@@ -36,11 +36,11 @@ export class CustomersFormularComponent {
   }
 
   private naplnForm(customer: Customer): void {
-    this.form.controls['id'].setValue(customer.customer_id);
-    this.form.controls["R.cislo"].setValue(customer.identification_number);
-    this.form.controls["Meno"].setValue(customer.customer_firstname);
-    this.form.controls["Priezvisko"].setValue(customer.customer_lastname);
-    this.form.controls["C.obc."].setValue(customer.o_number);
+    this.form.controls['customer_id'].setValue(customer.customer_id);
+    this.form.controls["identification_number"].setValue(customer.identification_number);
+    this.form.controls["customer_firstname"].setValue(customer.customer_firstname);
+    this.form.controls["customer_lastname"].setValue(customer.customer_lastname);
+    this.form.controls["o_number"].setValue(customer.o_number);
 
   }
 

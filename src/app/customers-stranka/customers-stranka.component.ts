@@ -10,7 +10,7 @@ import {CustomerServiceService} from "../../customer-service.service";
 })
 export class CustomersStrankaComponent implements OnInit {
 
-  customery: CustomerZoznam[] = [];
+  customers: CustomerZoznam[] = [];
 
   customerNaUpravu?: Customer;
 
@@ -23,7 +23,7 @@ export class CustomersStrankaComponent implements OnInit {
   refreshCustomerov(): void {
     this.customerService.getCustomers().subscribe(data => {
       console.log('prislo:', data);
-      this.customery = data;
+      this.customers = data;
     });
   }
 
