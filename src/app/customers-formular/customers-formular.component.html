@@ -20,8 +20,9 @@
   </label>
   <br>
 
-  <button (click)="pridaj()" *ngIf="form.value.id === null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">PRIDAJ</button>
-  <button (click)="uprav()" *ngIf="form.value.id !== null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">UPRAV</button>
+  <button (click)="pridaj()" *ngIf="form.value.customer_id === null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">PRIDAJ</button>
+
+  <button (click)="uprav()" *ngIf="form.value.customer_id !== null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">UPRAV</button>
   <button (click)="zrus()" type="button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">ZRUŠ</button>
 
 </form>
