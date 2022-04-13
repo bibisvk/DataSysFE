@@ -3,6 +3,7 @@ import {MenuComponent} from "./menu/menu.component";
 import {NgModule} from "@angular/core";
 import {AutoStrankaComponent} from "./Auta/auto-stranka/auto-stranka.component";
 import {CustomersStrankaComponent} from "./Zakaznici/customers-stranka/customers-stranka.component";
+import {BorrowingStrankaComponent} from "./Vypozicky/borrowing-stranka/borrowing-stranka.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'customer',
     component: CustomersStrankaComponent
+  },
+  {
+  path: 'borrowing',
+  component: BorrowingStrankaComponent
   },
   {
     path: '',
