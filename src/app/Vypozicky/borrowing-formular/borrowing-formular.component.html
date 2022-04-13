@@ -1,0 +1,28 @@
+<form [formGroup]="form" class="mx-3 mt-4 span-6">
+
+  <label>
+    <input formControlName="carId" class="form-control shadow rounded" placeholder="car_Id">
+  </label>
+  <br>
+
+  <label>
+    <input formControlName="customerId" class="form-control shadow rounded" placeholder="customer_Id">
+  </label>
+  <br>
+
+  <label>
+    <input formControlName="borrowingStartDate" class="form-control shadow rounded" placeholder="Start_Date">
+  </label>
+  <br>
+
+  <label>
+    <input formControlName="borrowingEndDate" class="form-control shadow rounded" placeholder="End_Date">
+  </label>
+  <br>
+
+  <button (click)="pridaj()" *ngIf="form.value.borrowingId === null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">PRIDAJ</button>
+
+  <button (click)="uprav()" *ngIf="form.value.borrowingId !== null" type="button" class="btn-danger rounded btn-lg shadow  font-weight-bold mr-3">UPRAV</button>
+  <button (click)="zrus()" type="button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">ZRUŠ</button>
+
+</form>

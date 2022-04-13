@@ -1,8 +1,8 @@
 import {RouterModule, Routes} from "@angular/router";
 import {MenuComponent} from "./menu/menu.component";
 import {NgModule} from "@angular/core";
-import {AutoStrankaComponent} from "./auto-stranka/auto-stranka.component";
-import {CustomersStrankaComponent} from "./customers-stranka/customers-stranka.component";
+import {AutoStrankaComponent} from "./Auta/auto-stranka/auto-stranka.component";
+import {CustomersStrankaComponent} from "./Zakaznici/customers-stranka/customers-stranka.component";
 
 const routes: Routes = [
   {

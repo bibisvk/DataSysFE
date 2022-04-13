@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {Customer} from "../models/customer.model";
+import {Customer} from "../../models/customer.model";
 
 @Component({
   selector: 'app-customer-formular',

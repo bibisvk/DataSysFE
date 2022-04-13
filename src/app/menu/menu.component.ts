@@ -22,7 +22,7 @@ export class MenuComponent {
       this.router.navigate(['/auto']);
     }
     if (m === MENU.VYPOZICKY) {
-      this.router.navigate(['/vypozicka']);
+      this.router.navigate(['/borrowing']);
     }
   }
 

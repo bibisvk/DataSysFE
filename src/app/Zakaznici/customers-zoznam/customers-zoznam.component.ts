@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CustomerZoznam} from "../models/customer.model";
+import {CustomerZoznam} from "../../models/customer.model";
 
 @Component({
   selector: 'app-customers-zoznam',

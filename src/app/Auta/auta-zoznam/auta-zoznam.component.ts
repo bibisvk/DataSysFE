@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {AutoZoznam} from "../models/auto.model";
+import {AutoZoznam} from "../../models/auto.model";
 
 @Component({
   selector: 'app-auta-zoznam',

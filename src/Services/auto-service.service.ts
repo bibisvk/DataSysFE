@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Auto, AutoZoznam} from "./app/models/auto.model";
+import {Auto, AutoZoznam} from "../app/models/auto.model";
 
 @Injectable({
   providedIn: 'root'

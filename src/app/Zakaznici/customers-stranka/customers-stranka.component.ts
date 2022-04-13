@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer, CustomerZoznam} from "../models/customer.model";
+import {Customer, CustomerZoznam} from "../../models/customer.model";
 import {Router} from "@angular/router";
-import {CustomerServiceService} from "../../customer-service.service";
+import {CustomerServiceService} from "../../../Services/customer-service.service";
 
 @Component({
   selector: 'app-customer-stranka',
