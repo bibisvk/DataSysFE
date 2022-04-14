@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {AutoZoznam} from "../../models/auto.model";
 
 @Component({
@@ -7,6 +7,8 @@ import {AutoZoznam} from "../../models/auto.model";
   styleUrls: ['./auta-zoznam.component.css']
 })
 export class AutaZoznamComponent{
+
+  term!: string;
 
   @Input()
   auta: AutoZoznam[] = [];
@@ -18,6 +20,7 @@ export class AutaZoznamComponent{
   zmazAuto: EventEmitter<number> = new EventEmitter<number>();
 
 
+
   uprav(autoId: number): void {
     this.upravAuto.emit(autoId);
   }
@@ -25,5 +28,10 @@ export class AutaZoznamComponent{
   zmaz(autoId: number): void {
     this.zmazAuto.emit(autoId);
   }
+
+
+
+
+
 
 }

@@ -36,4 +36,6 @@ export class AutoServiceService {
   exportAuto(): Observable<Blob>{
     return this.http.get(`${this.apiUrl}/pdf`,{responseType:'blob'});
   }
+
+
 }
