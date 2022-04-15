@@ -8,6 +8,8 @@ import {BorrowingZoznam} from "../../models/borrowing.model";
 })
 export class BorrowingZoznamComponent {
 
+  term!: string;
+
 
   @Input()
   borrowings: BorrowingZoznam[] = [];

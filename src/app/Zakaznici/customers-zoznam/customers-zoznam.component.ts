@@ -8,6 +8,8 @@ import {CustomerZoznam} from "../../models/customer.model";
 })
 export class CustomersZoznamComponent{
 
+  term!: string;
+
   @Input()
   customers: CustomerZoznam[] = [];
 

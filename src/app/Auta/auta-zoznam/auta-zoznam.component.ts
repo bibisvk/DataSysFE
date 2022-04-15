@@ -6,7 +6,7 @@ import {AutoZoznam} from "../../models/auto.model";
   templateUrl: './auta-zoznam.component.html',
   styleUrls: ['./auta-zoznam.component.css']
 })
-export class AutaZoznamComponent{
+export class AutaZoznamComponent {
 
   term!: string;
 
@@ -20,7 +20,6 @@ export class AutaZoznamComponent{
   zmazAuto: EventEmitter<number> = new EventEmitter<number>();
 
 
-
   uprav(autoId: number): void {
     this.upravAuto.emit(autoId);
   }
@@ -28,10 +27,4 @@ export class AutaZoznamComponent{
   zmaz(autoId: number): void {
     this.zmazAuto.emit(autoId);
   }
-
-
-
-
-
-
 }
