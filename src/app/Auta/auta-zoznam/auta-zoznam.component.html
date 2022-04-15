@@ -20,13 +20,12 @@
       <th>Osoby</th>
       <th>Kufor</th>
       <th>Bezpečnosť</th>
-      <th></th>
     </tr>
     </thead>
 
     <tbody>
     <tr *ngFor="let auto of auta | filter:term">
-      <td>{{auto.id}}</td>
+      <td>{{ auto.id }}</td>
       <td>{{ auto.price }}</td>
       <td>{{ auto.doors }}</td>
       <td>{{ auto.persons }}</td>
