@@ -1,11 +1,6 @@
-<div class="col-1">
-  <h1><button type = "button" class="btn-danger rounded btn-lg shadow rounded font-weight-bold">ZOZNAM</button></h1>
-</div>
-
-<div class="form-group mx-3">
+<div class="form-group mx-3 mt-3">
   <input type="text" class="form-control" placeholder="Vyhladavanie..." [(ngModel)]="term">
 </div>
-
 <div class="mx-3">
   <div *ngIf="!customers || customers?.length === 0">
     Zoznam zákazníkov je prázdny.
@@ -14,17 +9,16 @@
   <table class="table table-hover" *ngIf="customers.length > 0">
     <thead>
     <tr>
-      <th>ID</th>
       <th>Rodné číslo</th>
       <th>Meno</th>
       <th>Priezvisko</th>
       <th>Č.občianskeho</th>
+      <th></th>
     </tr>
     </thead>
 
     <tbody>
-    <tr *ngFor="let customer of customers | filter:term">
-      <td>{{customer.customer_id}}</td>
+    <tr *ngFor="let customer of customers">
       <td>{{ customer.identification_number }}</td>
       <td>{{ customer.customer_firstname }}</td>
       <td>{{ customer.customer_lastname }}</td>
