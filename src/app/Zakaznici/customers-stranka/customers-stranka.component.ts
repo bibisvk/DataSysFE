@@ -14,9 +14,6 @@ export class CustomersStrankaComponent implements OnInit {
 
   customerNaUpravu?: Customer;
 
-  visibilityzoznam:boolean=true;
-
-
   constructor(private router: Router, private customerService: CustomerServiceService) { }
 
   ngOnInit(): void {
@@ -71,10 +68,6 @@ export class CustomersStrankaComponent implements OnInit {
     this.customerService.deleteCustomer(customerId).subscribe(data => {
       this.refreshCustomerov();
     });
-  }
-
-  viditelnostzoznam(): void{
-    this.visibilityzoznam=false;
   }
 
 }
