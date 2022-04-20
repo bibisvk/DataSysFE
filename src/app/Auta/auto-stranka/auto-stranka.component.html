@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-3">
       <div class="col">
         <h1><button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold">AUTÁ</button></h1>
       </div>
@@ -8,7 +8,10 @@
                           (pridajAuto)="pridaj($event)"
                           (upravAuto)="uprav($event)">
       </app-auto-formular>
-
+      <br><br>
+      <div>
+        <img src="/assets/bmjam.jpg" alt="Logo" class="center" width="200">
+      </div>
     </div>
     <div class="col-9">
       <app-auta-zoznam [auta]="auta"
