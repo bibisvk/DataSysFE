@@ -3,12 +3,12 @@
 </div>
 
 <div class="form-group mx-3">
-  <input type="text" class="form-control" placeholder="Vyhladavanie..." [(ngModel)]="term">
+  <input type="text" class="form-control" placeholder="Vyhľadávanie..." [(ngModel)]="term">
 </div>
 
 <div class="mx-3">
   <div *ngIf="!borrowings || borrowings?.length === 0">
-    Zoznam vypoziciek je prázdny.
+    Zoznam výpožičiek je prázdny.
   </div>
 
   <table class="table table-hover" *ngIf="borrowings.length > 0">
