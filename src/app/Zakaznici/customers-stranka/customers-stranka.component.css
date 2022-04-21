@@ -1,0 +1,14 @@
+footer {
+  background-color: darkred;
+  color: white;
+  padding-top: 2rem;
+}
+hr.hrfooter {
+  border-top: 1px solid #000000;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+a {
+  color: white;
+}
