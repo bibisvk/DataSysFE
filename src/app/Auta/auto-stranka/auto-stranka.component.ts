@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Auto, AutoZoznam} from "../../models/auto.model";
 import {Router} from "@angular/router";
 import {AutoServiceService} from "../../../Services/auto-service.service";
-
+enum MENU { OSOBY, AUTA, VYPOZICKY }
 @Component({
   selector: 'app-auto-stranka',
   templateUrl: './auto-stranka.component.html',
@@ -14,6 +14,7 @@ export class AutoStrankaComponent implements OnInit {
 
   autoNaUpravu?: Auto;
 
+  menu = MENU;
   constructor(private router: Router, private autoService: AutoServiceService) { }
 
   ngOnInit(): void {
@@ -68,6 +69,18 @@ export class AutoStrankaComponent implements OnInit {
     this.autoService.deleteAuto(autoId).subscribe(data => {
       this.refreshAut();
     });
+  }
+
+  otvorMenu(m: MENU) {
+    if (m === MENU.OSOBY) {
+      this.router.navigate(['/customer']);
+    }
+    if (m === MENU.AUTA) {
+      this.router.navigate(['/auto']);
+    }
+    if (m === MENU.VYPOZICKY) {
+      this.router.navigate(['/borrowing']);
+    }
   }
 
 

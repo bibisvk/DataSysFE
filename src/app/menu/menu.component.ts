@@ -10,7 +10,7 @@ enum MENU { OSOBY, AUTA, VYPOZICKY }
 })
 export class MenuComponent {
 
-  menu = MENU;
+   menu = MENU;
 
   constructor(private router: Router) { }
 
@@ -24,6 +24,9 @@ export class MenuComponent {
     if (m === MENU.VYPOZICKY) {
       this.router.navigate(['/borrowing']);
     }
+  }
+  chodSpat(): void {
+    this.router.navigate(['']);
   }
 
 }

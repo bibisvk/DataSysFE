@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Borrowing, BorrowingZoznam} from "../../models/borrowing.model";
 import {Router} from "@angular/router";
 import {BorrowingServiceService} from "../../../Services/borrowing-service.service";
-
+enum MENU { OSOBY, AUTA, VYPOZICKY }
 @Component({
   selector: 'app-borrowing-stranka',
   templateUrl: './borrowing-stranka.component.html',
@@ -14,6 +14,8 @@ export class BorrowingStrankaComponent implements OnInit {
   borrowings: BorrowingZoznam[] = [];
 
   borrowingNaUpravu?: Borrowing;
+
+  menu = MENU;
 
   constructor(private router: Router, private borrowingService: BorrowingServiceService) { }
 
@@ -69,6 +71,18 @@ export class BorrowingStrankaComponent implements OnInit {
     this.borrowingService.deleteBorrowing(borrowingId).subscribe(data => {
       this.refreshBorrowings();
     });
+  }
+
+  otvorMenu(m: MENU) {
+    if (m === MENU.OSOBY) {
+      this.router.navigate(['/customer']);
+    }
+    if (m === MENU.AUTA) {
+      this.router.navigate(['/auto']);
+    }
+    if (m === MENU.VYPOZICKY) {
+      this.router.navigate(['/borrowing']);
+    }
   }
 
 

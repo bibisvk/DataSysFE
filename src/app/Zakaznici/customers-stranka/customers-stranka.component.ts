@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Customer, CustomerZoznam} from "../../models/customer.model";
 import {Router} from "@angular/router";
 import {CustomerServiceService} from "../../../Services/customer-service.service";
-
+enum MENU { OSOBY, AUTA, VYPOZICKY }
 @Component({
   selector: 'app-customer-stranka',
   templateUrl: './customers-stranka.component.html',
@@ -13,6 +13,9 @@ export class CustomersStrankaComponent implements OnInit {
   customers: CustomerZoznam[] = [];
 
   customerNaUpravu?: Customer;
+
+
+  menu = MENU;
 
   constructor(private router: Router, private customerService: CustomerServiceService) { }
 
@@ -68,6 +71,17 @@ export class CustomersStrankaComponent implements OnInit {
     this.customerService.deleteCustomer(customerId).subscribe(data => {
       this.refreshCustomerov();
     });
+  }
+  otvorMenu(m: MENU) {
+    if (m === MENU.OSOBY) {
+      this.router.navigate(['/customer']);
+    }
+    if (m === MENU.AUTA) {
+      this.router.navigate(['/auto']);
+    }
+    if (m === MENU.VYPOZICKY) {
+      this.router.navigate(['/borrowing']);
+    }
   }
 
 }

@@ -1,9 +1,13 @@
+<ul>
+  <li><button class="button" (click)="chodSpat()">Domov</button></li>
+  <li><button class="button" (click)="otvorMenu(menu.OSOBY)">Zákazníci</button></li>
+  <li><button class="button"(click)="otvorMenu(menu.AUTA)">Autá</button></li>
+  <li><button class="button"(click)="otvorMenu(menu.VYPOZICKY)">Výpožičky</button></li>
+</ul>
+<br>
 <div class="container">
   <div class="row">
     <div class="col-3">
-      <div class="col">
-        <h1><button type = "button" class="btn-danger btn-lg shadow rounded font-weight-bold">ZÁKAZNÍCI</button></h1>
-      </div>
       <app-customer-formular  [customer]="customerNaUpravu!"
                               (pridajCustomera)="pridaj($event)"
                               (upravCustomera)="uprav($event)">
